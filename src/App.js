@@ -19,7 +19,6 @@ class App extends React.Component{
     this.handleWakeChange=this.handleWakeChange.bind(this);
     this.fetchTime=this.fetchTime.bind(this);
     this.calculateDuration=this.calculateDuration.bind(this);
-    this.calculateMins=this.calculateMins.bind(this);
   }
 
   checkerror(sleep,wake){
@@ -164,12 +163,15 @@ class App extends React.Component{
                           </svg>
                       </div>
                   </div>
+                  <Row className="tl text-white justify-content-center duration">
+                      <span>{parseInt(this.calculateDuration()/100)}</span>
+                      <div><span className="ts">HR</span></div> 
+                    
+                      <span>{parseInt(this.calculateDuration()%100)}</span>
+                      <div><span className="ts">MIN</span></div>
+                  </Row>
                 </div>
               </Col>
-            </Row>
-            <Row className="text-large">
-              <Col>{parseInt(this.calculateDuration()/100)}hrs</Col>
-              <Col>{parseInt(this.calculateDuration()%100)}min</Col>
             </Row>
           </Container>
         </div>

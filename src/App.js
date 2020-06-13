@@ -18,6 +18,8 @@ class App extends React.Component{
     this.handleSleepChange=this.handleSleepChange.bind(this);
     this.handleWakeChange=this.handleWakeChange.bind(this);
     this.fetchTime=this.fetchTime.bind(this);
+    this.calculateDuration=this.calculateDuration.bind(this);
+    this.calculateMins=this.calculateMins.bind(this);
   }
 
   checkerror(sleep,wake){
@@ -114,6 +116,10 @@ class App extends React.Component{
     )
   }
 
+  calculateDuration(){
+    return Math.abs(this.state.sleep-this.state.wake);
+  }
+
   render(){
       return (
         <div className="App">
@@ -160,6 +166,10 @@ class App extends React.Component{
                   </div>
                 </div>
               </Col>
+            </Row>
+            <Row className="text-large">
+              <Col>{parseInt(this.calculateDuration()/100)}hrs</Col>
+              <Col>{parseInt(this.calculateDuration()%100)}min</Col>
             </Row>
           </Container>
         </div>

@@ -1,5 +1,13 @@
 @media(min-width:576px){
   .tl{
+    font-size: 2em !important;
+  }
+  .ts{
+    font-size: 0.25em !important;
+  }
+}
+@media(min-width:995px){
+  .tl{
     font-size: 4em !important;
   }
   .ts{

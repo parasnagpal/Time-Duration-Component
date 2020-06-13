@@ -4,8 +4,7 @@
 
 Time Duration Component with analog Clock.
 
-
-[!Mobile Viewport](https://github.com/parasnagpal/Time-Duration-Component/blob/master/src/assets/images/mobile-viewport.jpg?raw=true)
+<img src="https://github.com/parasnagpal/Time-Duration-Component/blob/master/src/assets/images/large-viewport.jpg?raw=true">
 
 ### Getting Started
 

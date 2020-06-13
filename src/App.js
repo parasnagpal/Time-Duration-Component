@@ -137,11 +137,21 @@ class App extends React.Component{
           <Container>
             <Row className="justify-content-center p-2">
               <Col md="2">
-                <Row className="justify-content-center text-large" ><RiMoonCloudyLine id="moon"/></Row>
+                <Row className="justify-content-center text-large text-warning" >
+                  <div className="d-flex flex-column justify-content-center">
+                    <RiMoonCloudyLine id="moon"/>
+                  </div> 
+                  <div>
+                    Bedtime
+                  </div>
+                </Row>
                 <Row><Input className="bg-dark m-2 text-light text-center" value={this.state.sleep} onChange={this.handleSleepChange}/></Row>
               </Col>
               <Col md="2">
-                <Row className="justify-content-center text-large text-warning" ><FaRegBell id="bell"/></Row>
+                <Row className="justify-content-center text-large text-warning" >
+                  <div className="d-flex flex-column justify-content-center"><FaRegBell id="bell"/></div>
+                  <div>Wake</div>
+                </Row>
                 <Row><Input className="bg-dark m-2 text-light text-center" value={this.state.wake} onChange={this.handleWakeChange}/></Row>
               </Col>
             </Row>
@@ -185,6 +195,7 @@ class App extends React.Component{
                 </div>
               </Col>
             </Row>
+            <Row className="justify-content-center text-small text-secondary">Enter the time in 2400 hrs format.</Row>
           </Container>
         </div>
       );

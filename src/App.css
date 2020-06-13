@@ -21,7 +21,6 @@ svg{
 .duration{
   stroke-dasharray: 565.48;
   stroke-dashoffset: 0;
-  stroke-linecap: round;
 }
 .rotate_45{
   transform: rotate(-90,60,60);

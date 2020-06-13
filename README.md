@@ -10,6 +10,7 @@ Time Duration Component with analog Clock.
 
 1. Clone the repository. Or use gitpod after forking the repository.
 2. Run the follwing command in project directory to run in development mode.
+
     `yarn start` 
 
 ### Contributing

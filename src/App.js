@@ -22,6 +22,7 @@ class App extends React.Component{
 
   checkerror(sleep,wake){
       if(sleep>=wake){
+        console.log(sleep+" "+wake)
         document.getElementById('error').classList.remove('d-none');
         return true;
       }
@@ -43,7 +44,7 @@ class App extends React.Component{
   }
 
   handleSleepChange(e){
-    this.checkerror(e.target.value,this.state.wake_time);
+    this.checkerror(this.fetchTime (e.target.value),this.state.wake_time);
     this.setState({
       sleep:e.target.value,
       sleep_time:this.fetchTime(e.target.value),
@@ -54,7 +55,7 @@ class App extends React.Component{
   }
 
   handleWakeChange(e){
-    this.checkerror(this.state.sleep_time,e.target.value);
+    this.checkerror(this.state.sleep_time,this.fetchTime(e.target.value));
     this.setState({
       wake:e.target.value,
       wake_time:this.fetchTime(e.target.value)
@@ -65,9 +66,11 @@ class App extends React.Component{
 
   calculateStrokeLength(){
     let l=Math.abs(this.state.sleep_time-this.state.wake_time);
-    console.log(this.state.sleep_time+" "+this.state.wake_time);
     let r=117.5;
     let length=2*Math.PI*r*l/12
+    if(this.state.wake_time<this.state.sleep_time){
+      length=2*Math.PI*r-length;
+    }
     console.log(length);
     return length;
   }
@@ -82,7 +85,7 @@ class App extends React.Component{
     else
     {
       $('#duration_opposite').removeClass('d-none')
-      return 2*Math.PI*r-length-20
+      return 2*Math.PI*r-length
     }
   }
 

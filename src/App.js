@@ -151,7 +151,7 @@ class App extends React.Component{
                       </div>
                       <div className="boundary-container" >
                           <svg viewBox="0 0 240 240" id="svg_rotate_opposite">
-                              <circle cx="120" cy="120" r="117.5" stroke="white" strokeWidth="5" fill="none" className="duration_opposite" id="duration_opposite"/>
+                              <circle cx="120" cy="120" r="117.5" stroke="#6c757d" strokeWidth="5" fill="none" className="duration_opposite" id="duration_opposite"/>
                           </svg>
                       </div>
                   </div>

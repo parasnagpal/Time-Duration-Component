@@ -22,7 +22,7 @@ class App extends React.Component{
   }
 
   checkerror(sleep,wake){
-      if(sleep>=wake){
+      if(Math.abs(sleep-wake)>=12){
         console.log(sleep+" "+wake)
         document.getElementById('error').classList.remove('d-none');
         return true;
@@ -161,7 +161,7 @@ class App extends React.Component{
               <Row className="text-center justify-content-center">Sleep duration should be less than 12hrs.</Row>
             </Row>
             <Row className="justify-content-center p-2">
-              <Col md="9">
+              <Col md="9" sm="11">
                 <div className="d-flex flex-column justify-content-center">
                   <div className="d-flex justify-content-center clock">
                       <div className="clock-container p-1" >
@@ -189,7 +189,7 @@ class App extends React.Component{
                       <span>{parseInt(this.calculateDuration()/100)}</span>
                       <div><span className="ts">HR</span></div> 
                     
-                      <span>{parseInt(this.calculateDuration()%100)}</span>
+                      <span className="pl-1">{parseInt(this.calculateDuration()%100)}</span>
                       <div><span className="ts">MIN</span></div>
                   </Row>
                 </div>

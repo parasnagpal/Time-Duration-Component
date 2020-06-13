@@ -116,7 +116,19 @@ class App extends React.Component{
   }
 
   calculateDuration(){
-    return Math.abs(this.state.sleep-this.state.wake);
+    let sleepTime=this.state.sleep_time;
+    let wakeTime=this.state.wake_time;
+    let duration=Math.abs(sleepTime-wakeTime);
+    let decimal=duration-Math.floor(duration);
+    duration=Math.floor(duration);
+    decimal/=100;
+    if(sleepTime>wakeTime)
+      duration=12-duration
+    decimal*=60;
+    decimal*=100;
+    duration*=100;
+    duration+=decimal;
+    return duration;
   }
 
   render(){

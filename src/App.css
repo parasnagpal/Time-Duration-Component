@@ -1,3 +1,11 @@
+@media(min-width:576px){
+  .tl{
+    font-size: 4em !important;
+  }
+  .ts{
+    font-size: 0.5em !important;
+  }
+}
 .App{
   background-color: black;
   height: 100vh;
@@ -28,9 +36,20 @@ svg{
 input{
   border: none !important;
 }
-.text-large{
+.text-large,.tl{
   font-size: x-large;
+}
+.text-small,.ts{
+  font-size: small;
 }
 .text-warning,#moon,#bell{
   fill: #ffc107 !important;
+}
+.duration{
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  position: absolute;
+  text-align: center;
 }
